@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RPP_lab_4</string>
+    <string name="widget_name">widget</string>
+    <string name="widget_text">Text in widget</string>
+</resources>
