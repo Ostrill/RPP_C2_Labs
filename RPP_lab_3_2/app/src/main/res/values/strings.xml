@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RPP_lab_3_2</string>
+    <string name="show_info_btn_text">Показать таблицу</string>
+    <string name="plus_record_btn_text">Добавить запись</string>
+    <string name="change_name_btn_text">Заменить последнюю</string>
+</resources>
