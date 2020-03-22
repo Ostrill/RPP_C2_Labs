@@ -83,7 +83,7 @@ public class Widget extends AppWidgetProvider {
 
         RemoteViews widgetView = new RemoteViews(context.getPackageName(),
                 R.layout.widget);
-        widgetView.setTextViewText(R.id.widget_text, getWidgetText(daysLeft+1));
+        widgetView.setTextViewText(R.id.widget_text, getWidgetText(daysLeft));
 
         Intent configIntent = new Intent(context, ConfigActivity.class);
         configIntent.setAction(AppWidgetManager.ACTION_APPWIDGET_CONFIGURE);
