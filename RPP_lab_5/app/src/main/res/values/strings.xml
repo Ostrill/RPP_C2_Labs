@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RPP_lab_5</string>
+    <string name="search_title">Search</string>
+    <string name="empty_likes_text">There are not likes</string>
+    <string name="empty_pictures_text">There are not cats :(</string>
+</resources>
