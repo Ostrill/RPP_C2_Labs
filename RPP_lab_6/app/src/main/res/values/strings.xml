@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RPP_lab_6</string>
+
+    <string name="buy_btn_text">buy</string>
+    <string name="ok_btn_text">OK</string>
+    <string name="cancel_btn_text">cancel</string>
+
+    <string name="dialog_name_hint">Product name</string>
+    <string name="dialog_price_hint">Price</string>
+    <string name="dialog_quantity_hint">Quantity</string>
+
+    <string name="back_edit_btn_text">edit</string>
+</resources>
