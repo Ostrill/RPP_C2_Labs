@@ -10,4 +10,6 @@
     <string name="dialog_quantity_hint">Quantity</string>
 
     <string name="back_edit_btn_text">edit</string>
+
+    <string name="empty_text">No products :(</string>
 </resources>

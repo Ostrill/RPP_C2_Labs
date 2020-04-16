@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -32,6 +33,8 @@ public class BackFragment extends Fragment {
     private BackRecyclerAdapter backRecyclerAdapter;
     private RecyclerView recyclerView = null;
 
+    private TextView emptyText;
+
     public BackFragment() {
     }
 
@@ -49,6 +52,7 @@ public class BackFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         setProductDialog = new SetProductDialogFragment();
 
+        emptyText = getView().findViewById(R.id.back_empty_text);
         recyclerView = getView().findViewById(R.id.back_recycler_view);
         initRecyclerView();
 
@@ -67,6 +71,14 @@ public class BackFragment extends Fragment {
         setProductDialog.setProduct(product);
         setProductDialog.setParent(getThisFragment());
         setProductDialog.show(getFragmentManager(), title);
+    }
+
+    private void setEmptyTextVisibility() {
+        if (backRecyclerAdapter.getItemCount() > 0) {
+            emptyText.setVisibility(View.GONE);
+        } else {
+            emptyText.setVisibility(View.VISIBLE);
+        }
     }
 
     private void initRecyclerView() {
@@ -90,6 +102,7 @@ public class BackFragment extends Fragment {
                                     onEditButtonClickListener
                             );
                             recyclerView.setAdapter(backRecyclerAdapter);
+                            setEmptyTextVisibility();
                         }
                     });
                 } catch (Exception e) {
@@ -127,6 +140,7 @@ public class BackFragment extends Fragment {
                 break;
             default: break;
         }
+        setEmptyTextVisibility();
     }
 
     private Fragment getThisFragment() {

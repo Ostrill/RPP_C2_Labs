@@ -15,28 +15,20 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
+            android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.card.MaterialCardView
+            <ImageView
+                android:id="@+id/front_image"
                 android:layout_width="300dp"
                 android:layout_height="200dp"
-                android:layout_gravity="center_horizontal"
-                app:cardElevation="1dp"
-                app:cardCornerRadius="5dp">
-
-                <ImageView
-                    android:id="@+id/front_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:tint="@color/imageColor"
-                    tools:src="@drawable/ic_image_other" />
-
-            </com.google.android.material.card.MaterialCardView>
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:tint="@color/imageColor"
+                tools:src="@drawable/ic_image_other" />
 
             <TextView
                 android:id="@+id/front_text_name"

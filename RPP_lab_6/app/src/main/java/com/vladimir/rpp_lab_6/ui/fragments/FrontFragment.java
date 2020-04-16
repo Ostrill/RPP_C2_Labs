@@ -10,6 +10,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -23,6 +24,7 @@ public class FrontFragment extends Fragment {
     private FrontViewPagerAdapter viewPagerAdapter;
     private ViewPager2 viewPager;
     private TabLayout tabLayout;
+    private TextView emptyText;
 
     public FrontFragment() {
     }
@@ -43,6 +45,7 @@ public class FrontFragment extends Fragment {
 
         viewPager = getView().findViewById(R.id.front_view_pager);
         tabLayout = getView().findViewById(R.id.front_tab_layout);
+        emptyText = getView().findViewById(R.id.front_empty_text);
 
         new Thread(new Runnable() {
             @Override
@@ -63,6 +66,7 @@ public class FrontFragment extends Fragment {
                                     tab.setText(Integer.toString(position+1));
                                 }
                             }).attach();
+                            setEmptyTextVisibility();
                         }
                     });
                 } catch (Exception e) {
@@ -76,12 +80,21 @@ public class FrontFragment extends Fragment {
         return this;
     }
 
+    private void setEmptyTextVisibility() {
+        if (viewPagerAdapter.getItemCount() > 0) {
+            emptyText.setVisibility(View.GONE);
+        } else {
+            emptyText.setVisibility(View.VISIBLE);
+        }
+    }
+
     public void updateAdapter(ShopEntity product) {
         int deletedPosition = viewPagerAdapter.updatePosition(product);
         viewPagerAdapter.notifyDataSetChanged();
         if (deletedPosition >= 0) {
             viewPager.setCurrentItem(deletedPosition, false);
         }
+        setEmptyTextVisibility();
     }
 
     private final FrontViewPagerAdapter.OnBuyButtonClickListener onBuyButtonClickListener =
