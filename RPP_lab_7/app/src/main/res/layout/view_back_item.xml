@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/back_image"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:tint="@color/imageColor"
+        tools:src="@drawable/ic_image_other"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/back_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Large"
+            tools:text="Крутой монитор sfn kjfgsk skj hks hkdsjf hksdfjh" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/back_text_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                tools:text="$99"/>
+
+            <TextView
+                android:id="@+id/back_text_quantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                tools:text="(45 в наличии)"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/back_edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_edit_btn_text"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+</LinearLayout>
