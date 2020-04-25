@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RPP_lab_8</string>
+
+    <string name="tab_from_label">From</string>
+    <string name="tab_to_label">To</string>
+
+    <string name="button_next_label">Next</string>
+    <string name="button_finish_label">Show path</string>
+
+    <string name="not_found_label">Not found</string>
+
+    <string name="search_title">Search...</string>
+    <string name="action_my_location_title">My location</string>
+    <string name="action_clear_title">Clear</string>
+</resources>
