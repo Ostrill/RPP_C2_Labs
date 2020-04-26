@@ -1,6 +1,5 @@
 package com.vladimir.rpp_lab_8.ui;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -35,7 +34,6 @@ import com.vladimir.rpp_lab_8.api.places.models.PlacesResponse;
 import com.vladimir.rpp_lab_8.api.places.models.SearchResult;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SetPointFragment extends Fragment implements OnMapReadyCallback {
 
@@ -85,6 +83,7 @@ public class SetPointFragment extends Fragment implements OnMapReadyCallback {
 
     private void setSearchView() {
         searchView = getView().findViewById(R.id.floating_search_view);
+        searchView.setShowSearchKey(true);
 
         searchView.setOnQueryChangeListener(new FloatingSearchView.OnQueryChangeListener() {
             @Override
@@ -223,7 +222,6 @@ public class SetPointFragment extends Fragment implements OnMapReadyCallback {
                 .icon(BitmapDescriptorFactory
                         .defaultMarker(BitmapDescriptorFactory.HUE_VIOLET)
                 )
-                .title(address.addressName)
         );
 
         Log.d(TAG, "distance is " + address.locationGeometry.viewport.getDistance());
